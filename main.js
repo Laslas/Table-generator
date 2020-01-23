@@ -11,6 +11,7 @@ let borWidth = document.querySelector('#border_width');
 let tblBorCol = document.querySelector('#border_color');
 let theadBgc = document.querySelector('#head_bgc');    
 let tbodyBgc = document.querySelector('#body_bgc');
+let oddBgc = document.querySelector('#body_bgc2')
 let codeBtn = document.querySelector('#code-btn');
 let form = document.querySelector('.gener');
 
@@ -21,14 +22,11 @@ codeBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
     let getCode = tbl.innerHTML;
-    const textA = document.createElement('p');
+    const textA = document.querySelector('p');
     textA.textContent = getCode;
-    textA.setAttribute('class', 'getcode');
     
-    document.body.appendChild(textA);
-    document.body.removeChild(textA);
+    textA.style.display = 'block';   
     
-
 })
 
 
@@ -36,8 +34,7 @@ codeBtn.addEventListener('click', (e) => {
 
 
 
-
-
+//table generator function
 
 let tableGener = (x, n) => {
     const thead = document.createElement('thead');
@@ -65,7 +62,7 @@ let tableGener = (x, n) => {
 
         } else {
 
-        trow.style.background = theadBgc.value;
+        trow.style.background = oddBgc.value;
         }
 
         tblbody.appendChild(trow);                      
@@ -130,7 +127,7 @@ let tableGener = (x, n) => {
 
 }
 
-//Table generator function
+//Table generator function added to button
 generBtn.addEventListener('click', e => {     
     e.preventDefault();
 
@@ -145,6 +142,20 @@ generBtn.addEventListener('click', e => {
     
 });
 
+form.addEventListener('click', () => {
+    
+
+    tbl.innerHTML = '';
+    tblbody.innerHTML = '';
+        
+
+    let n = colInput.value; //column input
+    let x = rowInput.value; //row input
+
+    tableGener(x, n); 
+    
+
+})
 
 
 
