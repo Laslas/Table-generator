@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic tables</title>
+    <link href="https://fonts.googleapis.com/css?family=Alata|Bangers|Fira+Sans:200,200i,400,500,500i,600,700i,800,800i,900,900i|Gelasio:400,500i,600i,700i|Lato:100,100i,300,400,700,900,900i|Lora:400,700,700i|Merriweather:400,700,700i,900i|Montserrat:100i,200,200i,300,400,600,700,700i,800i,900,900i|Noto+Sans+KR:100,400|Open+Sans+Condensed:300,700|Open+Sans:400,600i,700,700i,800|Oswald:300,400,500,600|PT+Serif:400,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700i,800,800i,900i|Poppins:100,100i,200,200i,300i,400,400i|Raleway:100i,200,200i,300,400,500,500i,600i,800,800i,900|Roboto+Condensed:300,400,400i,700,700i|Six+Caps|Titillium+Web:200,200i,300,400,600,600i,700i,900|Ubuntu:400,500,500i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+
+    <div class="mainheader">
+        <h1 class="title">HTML Table Generator</h1>
+        <form class="gener">
+            <div class="generdiv_first">
+                <div class="generdiv_first-input"><label for="row">Number of rows:</label><input type="number" name="row_input" id="row_input" class="generdivfirst-input"></div>
+
+                <div class="generdiv_first-input"><label for="column">Number of columns:</label><input type="number" name="column_input" id="column_input" class="generdivfirst-input"></div>
+
+                <div class="generdiv_first-input"><label for="table-width">Table width (%):</label><input type="number" name="table_width" id="table_width" class="generdivfirst-input"></div>
+
+                <div class="generdiv_first-input"><label for="border-width">Border width in pixels:</label><input type="number" name="border_width" id="border_width" class="generdivfirst-input"></div>
+
+            </div>
+
+            <div class="generdiv_second">
+                <div class="generdiv_second-input"><label for="head-bgc">Head Background Color</label><input type="color" name="head_bgc" id="head_bgc" class="generdivsecond-input" value="#000000"></div>
+
+                <div class="generdiv_second-input"><label for="body-bgc">Body Background Color</label><input type="color" name="body_bgc" id="body_bgc" class="generdivsecond-input" value="#f96167"></div>
+
+                <div class="generdiv_second-input"><label for="border-color">Border Color</label><input type="color" name="border_color" id="border_color" class="generdivsecond-input" value="#fce77d"></div>
+
+                <div class="generdiv_second-input"><label for="font-color">Font Color</label><input type="color" name="font_color" id="font_color" class="generdivsecond-input" value="#fce77d"></div>
+            </div>
+
+            <div class="generdiv_third">
+                <div class="generdiv_third-input">
+                    <label for="border-collapse">Border Collapse</label>
+                    <input type="checkbox" name="border_collapse" id="border_collapse" value="checked">
+
+                </div>
+                <div class="generdiv_third-input">
+                    <label for="font-type">Font Type</label>
+                    <select name="" id="font_select">
+                        <option value="Arial Narrow">Arial Narrow</option>
+                        <optgroup>
+                            <option value="Lato">Lato</option>
+                            <option value="Open Sans">Open Sans</option>
+                            <option value="Gelasio">Gelasio</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Roboto Condensed">Roboto Condensed</option>
+                            <option value="Raleway">Raleway</option>
+                            <option value="Poppins">Poppins</option>
+                            <option value="Merriweather">Merriweather</option>
+                            <option value="Ubuntu">Ubuntu</option>
+                            <option value="Six Caps">Six Caps</option>
+                            <option value="Playfair Display">Playfair Display</option>
+                            <option value="Open Sans Condensed">Open Sans Condensed</option>
+                            <option value="PT Serif">PT Serif</option>
+                            <option value="Lora">Lora</option>
+                            <option value="Titillium Web">Titillium Web</option>
+                            <option value="Alata">Alata</option>
+                            <option value="Fira Sans">Fira Sans</option>
+                            <option value="Noto Sans KR">Noto Sans KR</option>
+                            <option value="Bangers">Bangers</option>
+                            <option value="Oswald">Oswald</option>
+                        </optgroup>
+
+                    </select>
+                </div>
+                <div class="generdiv_third-input">
+                    <label for="">Font Weight</label>
+                    <select name="font_weight" id="font_weight">
+                        <option value="100">100</option>
+                        <optgroup>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                            <option value="600">600</option>
+                            <option value="700">700</option>
+                            <option value="800">800</option>
+                            <option value="900">900</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="generdiv_third-input">
+                    <label for="text-align">Text Align</label>
+                    <select name="text_align" id="text_align">
+                        <option value="Center">Center</option>
+                        <optgroup>
+                            <option value="Right">Right</option>
+                            <option value="Left">Left</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="generdiv_third-input">
+                    <label for="font-size">Font Size</label>
+                    <input type="number" name="font_size" id="font_size" value="18">
+                </div>
+            </div>
+
+            <div class="generdiv_fourth">
+                <div class="btn_div">
+                    <button class="generdivfourth-btns" id="gener-btn">Generate Table</button>
+                    <button class="generdivfourth-btns" id="code-btn">Get Code</button>
+                </div>
+            </div>
+
+
+        </form>
+
+    </div>
+
+            
+
+            
+
+            
+    <table class="tabl" border="1"></table>
+
+        
+
+    
+
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    
+}
+
+.mainheader {
+    width: 100%;
+    background-color: #fce77d;
+    color: #f96167;
+    padding: 5px;
+    margin: 0px;
+}
+
+.title {
+    text-align: center;
+    font-size: 4vw;
+}
+
+.gener {
+    margin: 10px 50px;
+}
+
+.generdiv_first {
+    display: flex;
+    justify-content: space-between;
+}
+
+.generdivfirst-input {
+    height: 25px;
+    width: 100px;
+    outline: none;
+
+}
+
+label {
+    font-weight: bold;
+}
+
+.generdiv_second {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.generdiv_third {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#font_select {
+    height: 25px;
+    width: 100px;
+    outline: none;
+
+}
+
+#font_weight {
+    height: 25px;
+    width: 100px;
+    outline: none;
+}
+
+#text_align {
+    height: 25px;
+    width: 100px;
+    outline: none;
+}
+
+#font_size {
+    height: 25px;
+    width: 100px;
+    outline: none;
+}
+
+.generdiv_fourth {
+    text-align: center;
+}
+
+.btn_div > button {
+    height: 35px;
+    width: 100px;
+    outline: none;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    color:  #fce77d;
+}
+
+#gener-btn {
+    background-color: #f96167;
+}
+
+#code-btn {
+    background-color: #000000;
+}
+
+.getcode {
+    color: red;
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid black;
+    overflow: hidden;
+    padding: 5px;
+}
